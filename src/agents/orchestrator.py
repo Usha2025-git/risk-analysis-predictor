@@ -311,9 +311,14 @@ RESOURCE RECOMMENDATIONS (Top 5)
         project_name = project_data.get('project_name', 'Project')
         team_size = project_data.get('team_size', 'Unknown')
         budget = project_data.get('budget', 0)
-        
-        critical_risks = sum(1 for r in risks if r.severity == 'Critical' if hasattr(r, 'severity') 
-                           else r.impact == 'Critical')
+
+        def _is_critical_risk(r) -> bool:
+            # Risks may be model instances or dicts depending on caller.
+            if isinstance(r, dict):
+                return r.get('severity') == 'Critical' or r.get('impact') == 'Critical'
+            return getattr(r, 'severity', None) == 'Critical' or getattr(r, 'impact', None) == 'Critical'
+
+        critical_risks = sum(1 for r in risks if _is_critical_risk(r))
         critical_bottlenecks = sum(1 for b in bottlenecks if b.severity == 'Critical')
         
         summary = f"""

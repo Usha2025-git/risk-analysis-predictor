@@ -4,16 +4,16 @@ from sqlalchemy.orm import Session
 from typing import List, Optional
 import uuid
 
-from app.database import get_db
-from app.models import Project, ProjectStatus
-from app.schemas import (
+from backend.app.database import get_db
+from backend.app.models import Project, ProjectStatus
+from backend.app.schemas import (
     Project as ProjectSchema,
     ProjectCreate,
     ProjectUpdate,
     ProjectAnalysisResponse
 )
-from app.api.dependencies import get_current_user
-from app.core.websocket import manager
+from backend.app.api.dependencies import get_current_user
+from backend.app.core.websocket import manager
 
 router = APIRouter()
 

@@ -1,7 +1,7 @@
 """Resource model."""
 from sqlalchemy import Column, String, Float, DateTime, Text, Enum
 from sqlalchemy.sql import func
-from app.database import Base
+from backend.app.database import Base
 import enum
 
 

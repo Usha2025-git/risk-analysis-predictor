@@ -19,6 +19,9 @@ class DataIngestor:
         self.projects_df: Optional[pd.DataFrame] = None
         self.resources_df: Optional[pd.DataFrame] = None
         self.incidents: List[Dict] = []
+        # Precomputed indexes for faster lookups during analysis
+        self._incidents_by_project_id: Dict[str, List[Dict]] = {}
+        self._incidents_by_category: Dict[str, List[Dict]] = {}
     
     def load_projects_csv(self, filename: str = "sample_projects.csv") -> pd.DataFrame:
         """Load projects from CSV file."""
@@ -54,8 +57,26 @@ class DataIngestor:
             data = json.load(f)
         
         self.incidents = data.get('incidents', [])
+        self._rebuild_incident_indexes()
         logger.info(f"Loaded {len(self.incidents)} incidents")
         return self.incidents
+
+    def _rebuild_incident_indexes(self) -> None:
+        """Build in-memory indexes for incident lookup speed."""
+        by_project: Dict[str, List[Dict]] = {}
+        by_category: Dict[str, List[Dict]] = {}
+
+        for inc in self.incidents:
+            pid = str(inc.get('project_id', '') or '')
+            cat = str(inc.get('category', '') or '')
+
+            if pid:
+                by_project.setdefault(pid, []).append(inc)
+            if cat:
+                by_category.setdefault(cat, []).append(inc)
+
+        self._incidents_by_project_id = by_project
+        self._incidents_by_category = by_category
     
     def load_all(self) -> Tuple[pd.DataFrame, pd.DataFrame, List[Dict]]:
         """Load all data sources."""
@@ -177,10 +198,14 @@ class DataIngestor:
     
     def get_incidents_for_project(self, project_id: str) -> List[Dict]:
         """Get incidents related to a specific project."""
+        if self._incidents_by_project_id:
+            return list(self._incidents_by_project_id.get(str(project_id), []))
         return [inc for inc in self.incidents if inc.get('project_id') == project_id]
     
     def get_incidents_by_category(self, category: str) -> List[Dict]:
         """Get incidents by category."""
+        if self._incidents_by_category:
+            return list(self._incidents_by_category.get(str(category), []))
         return [inc for inc in self.incidents if inc.get('category') == category]
     
     def get_statistics(self) -> Dict:

@@ -48,7 +48,9 @@ export const RESOURCE_STATUSES = [
   { value: 'unavailable', label: 'Unavailable', color: 'bg-red-100 text-red-800' },
 ];
 
-export const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+// Default to same-origin API for local dev via Vite proxy (/api -> backend)
+// and for docker/nginx where /api is reverse-proxied to the backend container.
+export const API_BASE_URL = import.meta.env.VITE_API_URL || '/api/v1';
 
 export const NOTIFICATION_DURATION = 5000; // ms
 

@@ -5,10 +5,10 @@ from fastapi.staticfiles import StaticFiles
 import logging
 import uuid
 
-from app.config import settings
-from app.database import init_db, get_db
-from app.core.websocket import manager
-from app.api.routes import auth, projects, risks, resources, analytics
+from backend.app.config import settings
+from backend.app.database import init_db, get_db
+from backend.app.core.websocket import manager
+from backend.app.api.routes import auth, projects, risks, resources, analytics
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -122,7 +122,7 @@ async def root():
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(
-        "app.main:app",
+        "backend.app.main:app",
         host="0.0.0.0",
         port=8000,
         reload=settings.DEBUG

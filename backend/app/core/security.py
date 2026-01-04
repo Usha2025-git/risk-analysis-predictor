@@ -4,7 +4,7 @@ from typing import Optional
 from jose import JWTError, jwt
 from passlib.context import CryptContext
 from pydantic import ValidationError
-from app.config import settings
+from backend.app.config import settings
 
 # Password hashing
 # Use a scheme that does NOT require the external `bcrypt` backend.

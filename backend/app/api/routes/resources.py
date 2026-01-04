@@ -4,10 +4,10 @@ from sqlalchemy.orm import Session
 from typing import List, Optional
 import uuid
 
-from app.database import get_db
-from app.models import Resource
-from app.schemas import Resource as ResourceSchema, ResourceCreate, ResourceUpdate
-from app.api.dependencies import get_current_user
+from backend.app.database import get_db
+from backend.app.models import Resource
+from backend.app.schemas import Resource as ResourceSchema, ResourceCreate, ResourceUpdate
+from backend.app.api.dependencies import get_current_user
 
 router = APIRouter()
 

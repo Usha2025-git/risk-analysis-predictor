@@ -1,7 +1,7 @@
 """Risk model."""
 from sqlalchemy import Column, String, Float, Integer, DateTime, Text, ForeignKey, Enum
 from sqlalchemy.sql import func
-from app.database import Base
+from backend.app.database import Base
 import enum
 
 

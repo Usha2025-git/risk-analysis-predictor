@@ -99,6 +99,7 @@ npm run dev
 ```
 
 Frontend will be available at: `http://localhost:5173`
+API calls from the frontend will be proxied to the backend at `http://localhost:8000` via the Vite `/api` proxy.
 
 ### Docker Deployment
 

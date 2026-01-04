@@ -45,14 +45,12 @@ services:
     build:
       context: .
       dockerfile: frontend/Dockerfile
-    environment:
-      VITE_API_URL: http://localhost:8000/api/v1
+      args:
+        VITE_API_URL: /api/v1
     ports:
       - "3000:80"
     depends_on:
       - backend
-    volumes:
-      - ./frontend/src:/app/src
 
 volumes:
   postgres_data:

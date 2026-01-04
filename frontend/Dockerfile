@@ -15,6 +15,10 @@ COPY frontend/*.json ./
 COPY frontend/*.js ./
 COPY frontend/*.ts ./
 
+# Build-time API base URL for Vite (must be set during build)
+ARG VITE_API_URL=/api/v1
+ENV VITE_API_URL=$VITE_API_URL
+
 # Build
 RUN npm run build
 

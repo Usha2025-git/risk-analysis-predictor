@@ -21,8 +21,7 @@
 - [ ] `pip install -r backend/requirements.txt` completed
 - [ ] PostgreSQL database created
 - [ ] `.env` file created with correct DATABASE_URL
-- [ ] Database migrations run: `alembic upgrade head`
-- [ ] Backend starts: `uvicorn app.main:app --reload`
+- [ ] Backend starts: `uvicorn backend.app.main:app --reload`
 - [ ] API docs accessible at `/docs`
 
 ### Docker Deployment
@@ -30,7 +29,6 @@
 - [ ] Docker Compose installed
 - [ ] `.env` file created with production values
 - [ ] `docker-compose up -d` completes successfully
-- [ ] Database initializes: `docker-compose exec backend alembic upgrade head`
 - [ ] Health check passes for all services
 - [ ] Backend accessible at port 8000
 - [ ] Database accessible at port 5432

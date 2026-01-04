@@ -74,16 +74,13 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 # Install dependencies
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 
 # Set up database
 # Update DATABASE_URL in ../.env to use your local PostgreSQL
 
-# Run migrations
-alembic upgrade head
-
 # Start server
-uvicorn app.main:app --reload --port 8000
+uvicorn backend.app.main:app --reload --port 8000
 ```
 
 Backend will be available at: `http://localhost:8000`
@@ -108,9 +105,6 @@ Frontend will be available at: `http://localhost:5173`
 ```bash
 # Start all services
 docker-compose up -d
-
-# Create database and tables
-docker-compose exec backend alembic upgrade head
 
 # View logs
 docker-compose logs -f
@@ -310,7 +304,7 @@ npm run test
 # Backend
 cd backend
 pip install gunicorn
-gunicorn app.main:app -w 4 -b 0.0.0.0:8000
+gunicorn backend.app.main:app -w 4 -b 0.0.0.0:8000
 
 # Frontend
 cd frontend

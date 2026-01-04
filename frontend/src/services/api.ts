@@ -3,7 +3,7 @@ import { LoginRequest, RegisterRequest, AuthResponse, User, Project, Risk, Resou
 
 type QueryParams = Record<string, string | number | boolean | undefined>;
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8001/api/v1';
 
 // Create axios instance
 const apiClient: AxiosInstance = axios.create({
@@ -32,10 +32,10 @@ apiClient.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
-      // Clear token and redirect to login
+      // Clear token and reload; app will auto-bootstrap a demo session
       localStorage.removeItem('access_token');
       localStorage.removeItem('user');
-      window.location.href = '/login';
+      window.location.href = '/';
     }
     return Promise.reject(error);
   }
@@ -53,6 +53,11 @@ export const authApi = {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
     });
+    return response.data;
+  },
+
+  demoLogin: async (): Promise<AuthResponse> => {
+    const response = await apiClient.post<AuthResponse>('/auth/demo');
     return response.data;
   },
 

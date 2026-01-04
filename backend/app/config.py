@@ -30,7 +30,7 @@ class Settings(BaseSettings):
     OPENAI_API_KEY: Optional[str] = None
     
     # WebSocket
-    WS_URL: str = "ws://localhost:8000"
+    WS_URL: str = "ws://localhost:8001"
     
     class Config:
         env_file = ".env"

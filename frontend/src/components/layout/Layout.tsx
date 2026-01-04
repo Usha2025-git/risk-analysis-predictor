@@ -19,7 +19,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate('/');
   };
 
   return (
@@ -87,6 +87,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <header className="bg-white border-b border-gray-200 px-8 py-4 flex items-center justify-between">
           <button
             onClick={() => setSidebarOpen(!sidebarOpen)}
+            aria-label={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}
+            title={sidebarOpen ? 'Collapse sidebar' : 'Expand sidebar'}
             className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
           >
             <Menu size={20} />

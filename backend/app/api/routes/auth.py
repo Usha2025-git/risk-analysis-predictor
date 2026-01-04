@@ -90,6 +90,56 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = 
     }
 
 
+@router.post("/demo")
+async def demo_login(db: Session = Depends(get_db)):
+    """Return a demo access token without requiring credentials.
+
+    This is intended for local/demo usage to avoid manual login/register steps.
+    """
+    demo_email = "demo@example.com"
+    demo_username = "demo"
+
+    user = db.query(User).filter(User.email == demo_email).first()
+    if not user:
+        user = db.query(User).filter(User.username == demo_username).first()
+
+    if not user:
+        user = User(
+            id=str(uuid.uuid4()),
+            email=demo_email,
+            username=demo_username,
+            full_name="Demo User",
+            hashed_password=get_password_hash(str(uuid.uuid4())),
+            is_active=True,
+        )
+        db.add(user)
+        db.commit()
+        db.refresh(user)
+
+    if not user.is_active:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="User account is inactive"
+        )
+
+    access_token_expires = timedelta(minutes=settings.ACCESS_TOKEN_EXPIRE_MINUTES)
+    access_token = create_access_token(
+        data={"sub": user.id},
+        expires_delta=access_token_expires
+    )
+
+    return {
+        "access_token": access_token,
+        "token_type": "bearer",
+        "user": {
+            "id": user.id,
+            "email": user.email,
+            "username": user.username,
+            "full_name": user.full_name
+        }
+    }
+
+
 async def get_current_user(token: str = Depends(oauth2_scheme), db: Session = Depends(get_db)):
     """Get current user from JWT token."""
     credentials_exception = HTTPException(

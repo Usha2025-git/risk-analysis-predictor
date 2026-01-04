@@ -12,7 +12,7 @@ from app.api.dependencies import get_current_user
 router = APIRouter()
 
 
-@router.post("/", response_model=RiskSchema)
+@router.post("", response_model=RiskSchema)
 async def create_risk(
     risk_data: RiskCreate,
     db: Session = Depends(get_db),
@@ -43,7 +43,7 @@ async def create_risk(
     return db_risk
 
 
-@router.get("/", response_model=List[RiskSchema])
+@router.get("", response_model=List[RiskSchema])
 async def list_risks(
     project_id: Optional[str] = Query(None),
     severity: Optional[str] = Query(None),

@@ -16,6 +16,7 @@ interface AuthState {
   setError: (error: string | null) => void;
   
   login: (email: string, password: string) => Promise<void>;
+  loginDemo: () => Promise<void>;
   register: (email: string, username: string, password: string) => Promise<void>;
   logout: () => void;
   getCurrentUser: () => Promise<void>;
@@ -51,6 +52,29 @@ export const useAuthStore = create<AuthState>((set) => ({
       if (typeof error === 'object' && error !== null && 'response' in error) {
         const err = error as { response?: { data?: { detail?: string } } };
         message = err.response?.data?.detail || 'Login failed';
+      }
+      set({ error: message, isLoading: false });
+      throw error;
+    }
+  },
+
+  loginDemo: async () => {
+    set({ isLoading: true, error: null });
+    try {
+      const response = await authApi.demoLogin();
+      localStorage.setItem('access_token', response.access_token);
+      localStorage.setItem('user', JSON.stringify(response.user));
+      set({
+        user: response.user,
+        token: response.access_token,
+        isAuthenticated: true,
+        isLoading: false,
+      });
+    } catch (error: unknown) {
+      let message = 'Demo login failed';
+      if (typeof error === 'object' && error !== null && 'response' in error) {
+        const err = error as { response?: { data?: { detail?: string } } };
+        message = err.response?.data?.detail || 'Demo login failed';
       }
       set({ error: message, isLoading: false });
       throw error;

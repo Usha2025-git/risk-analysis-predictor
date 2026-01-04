@@ -117,6 +117,8 @@ export default function Projects() {
               type="date"
               value={formData.start_date}
               onChange={(e) => setFormData({ ...formData, start_date: e.target.value })}
+              aria-label="Project start date"
+              title="Project start date"
               required
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none"
             />
@@ -124,6 +126,8 @@ export default function Projects() {
               type="date"
               value={formData.planned_end_date}
               onChange={(e) => setFormData({ ...formData, planned_end_date: e.target.value })}
+              aria-label="Planned end date"
+              title="Planned end date"
               required
               className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none"
             />
@@ -161,6 +165,8 @@ export default function Projects() {
                 risk_level: e.target.value as CreateProjectRequest['risk_level'],
               })
             }
+            aria-label="Project risk level"
+            title="Project risk level"
             className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none"
           >
             <option value="low">Low Risk</option>
@@ -203,6 +209,8 @@ export default function Projects() {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
+            aria-label="Filter projects by status"
+            title="Filter projects by status"
             className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none"
           >
             <option value="">All Statuses</option>
@@ -215,6 +223,8 @@ export default function Projects() {
           <select
             value={riskFilter}
             onChange={(e) => setRiskFilter(e.target.value)}
+            aria-label="Filter projects by risk"
+            title="Filter projects by risk"
             className="px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 outline-none"
           >
             <option value="">All Risks</option>
@@ -247,6 +257,8 @@ export default function Projects() {
                   <h3 className="text-lg font-semibold text-gray-900 flex-1">{project.name}</h3>
                   <button
                     onClick={() => handleDeleteProject(project.id)}
+                    aria-label={`Delete project ${project.name}`}
+                    title={`Delete project ${project.name}`}
                     className="text-red-500 hover:text-red-700 transition-colors"
                   >
                     <Trash2 size={18} />

@@ -18,7 +18,7 @@ from app.core.websocket import manager
 router = APIRouter()
 
 
-@router.post("/", response_model=ProjectSchema)
+@router.post("", response_model=ProjectSchema)
 async def create_project(
     project_data: ProjectCreate,
     db: Session = Depends(get_db),
@@ -43,7 +43,7 @@ async def create_project(
     return db_project
 
 
-@router.get("/", response_model=List[ProjectSchema])
+@router.get("", response_model=List[ProjectSchema])
 async def list_projects(
     skip: int = Query(0, ge=0),
     limit: int = Query(100, ge=1, le=1000),

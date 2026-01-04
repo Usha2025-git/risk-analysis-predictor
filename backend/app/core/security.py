@@ -7,12 +7,19 @@ from pydantic import ValidationError
 from app.config import settings
 
 # Password hashing
-pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
+# Use a scheme that does NOT require the external `bcrypt` backend.
+# This avoids platform-specific bcrypt issues (common on Windows).
+pwd_context = CryptContext(schemes=["pbkdf2_sha256"], deprecated="auto")
 
 
 def verify_password(plain_password: str, hashed_password: str) -> bool:
     """Verify a plain password against its hash."""
-    return pwd_context.verify(plain_password, hashed_password)
+    try:
+        return pwd_context.verify(plain_password, hashed_password)
+    except Exception:
+        # Treat any hash/algorithm/backend issues as a failed verification
+        # so the API returns 401 instead of 500.
+        return False
 
 
 def get_password_hash(password: str) -> str:

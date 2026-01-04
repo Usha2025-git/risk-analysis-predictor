@@ -12,7 +12,7 @@ from app.api.dependencies import get_current_user
 router = APIRouter()
 
 
-@router.post("/", response_model=ResourceSchema)
+@router.post("", response_model=ResourceSchema)
 async def create_resource(
     resource_data: ResourceCreate,
     db: Session = Depends(get_db),
@@ -39,7 +39,7 @@ async def create_resource(
     return db_resource
 
 
-@router.get("/", response_model=List[ResourceSchema])
+@router.get("", response_model=List[ResourceSchema])
 async def list_resources(
     skill_category: Optional[str] = Query(None),
     status: Optional[str] = Query(None),

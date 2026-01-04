@@ -26,8 +26,15 @@ export default function Login() {
       newErrors.email = 'Invalid email address';
     }
     
-    if (!validatePassword(password)) {
-      newErrors.password = 'Password must be at least 8 characters';
+    // For login, only require a non-empty password to allow legacy demo creds
+    if (mode === 'login') {
+      if (!password.trim()) {
+        newErrors.password = 'Password is required';
+      }
+    } else {
+      if (!validatePassword(password)) {
+        newErrors.password = 'Password must be at least 8 characters';
+      }
     }
     
     if (mode === 'register') {
@@ -225,7 +232,7 @@ export default function Login() {
                 <strong>Demo Credentials:</strong>
               </p>
               <p className="text-xs text-gray-600">Email: demo@example.com</p>
-              <p className="text-xs text-gray-600">Password: password123</p>
+              <p className="text-xs text-gray-600">Password: Demo!2026#01</p>
             </div>
           )}
         </div>

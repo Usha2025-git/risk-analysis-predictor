@@ -2,6 +2,7 @@
 Bottleneck Detector Agent for identifying workflow bottlenecks.
 """
 import logging
+import re
 from typing import List, Dict, Optional, Tuple
 from datetime import datetime
 from src.utils import Bottleneck
@@ -15,7 +16,38 @@ class BottleneckDetectorAgent:
     def __init__(self, historical_projects: List[Dict], incidents: List[Dict]):
         self.historical_projects = historical_projects
         self.incidents = incidents
+        # Pre-index incident text for faster keyword matching during analysis
+        self._incident_ids_by_token: Dict[str, set[int]] = {}
+        self._high_incident_ids_by_token: Dict[str, set[int]] = {}
+        self._build_incident_token_index()
         logger.info("Initialized BottleneckDetectorAgent")
+
+    def _build_incident_token_index(self) -> None:
+        """Build inverted index from token -> incident ids (and high severity incident ids)."""
+        if not self.incidents:
+            self._incident_ids_by_token = {}
+            self._high_incident_ids_by_token = {}
+            return
+
+        incident_ids_by_token: Dict[str, set[int]] = {}
+        high_ids_by_token: Dict[str, set[int]] = {}
+
+        for idx, inc in enumerate(self.incidents):
+            desc = (inc.get('description') or '')
+            tokens = set(re.findall(r"[a-z0-9]+", desc.lower()))
+            if not tokens:
+                continue
+
+            severity = (inc.get('severity') or '').strip()
+            is_high = severity in {"Critical", "High"}
+
+            for tok in tokens:
+                incident_ids_by_token.setdefault(tok, set()).add(idx)
+                if is_high:
+                    high_ids_by_token.setdefault(tok, set()).add(idx)
+
+        self._incident_ids_by_token = incident_ids_by_token
+        self._high_incident_ids_by_token = high_ids_by_token
     
     def analyze_project_bottlenecks(
         self,
@@ -213,19 +245,20 @@ class BottleneckDetectorAgent:
             severity_factors += 1
         
         # Factor 4: Historical risk
-        task_keywords = task_name.lower().split()
-        related_incidents = [
-            i for i in self.incidents
-            if any(keyword in i.get('description', '').lower() for keyword in task_keywords)
-        ]
-        
-        high_severity_incidents = [
-            i for i in related_incidents
-            if i.get('severity') in ['Critical', 'High']
-        ]
-        
-        if high_severity_incidents:
-            severity_factors += len(high_severity_incidents)
+        task_tokens = set(re.findall(r"[a-z0-9]+", task_name.lower()))
+        if task_tokens and self._incident_ids_by_token:
+            related_ids = set()
+            high_ids = set()
+            for tok in task_tokens:
+                related_ids |= self._incident_ids_by_token.get(tok, set())
+                high_ids |= self._high_incident_ids_by_token.get(tok, set())
+
+            if high_ids:
+                # Increase severity based on unique high-severity incidents touching this task area.
+                severity_factors += len(high_ids)
+        else:
+            related_ids = set()
+            high_ids = set()
         
         # Determine severity
         if severity_factors > 4:
@@ -245,8 +278,8 @@ class BottleneckDetectorAgent:
             root_cause = f'Critical task blocking {dependent_count} downstream tasks'
         elif len(dependencies) > 2:
             root_cause = f'Multiple dependencies ({len(dependencies)}) create scheduling complexity'
-        elif high_severity_incidents:
-            root_cause = f'{len(high_severity_incidents)} historical incidents in this area'
+        elif high_ids:
+            root_cause = f'{len(high_ids)} historical high-severity incidents in this area'
         else:
             root_cause = 'Extended duration creates schedule pressure'
         

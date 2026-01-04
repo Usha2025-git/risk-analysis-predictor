@@ -63,7 +63,8 @@ class VectorStore:
         }
         
         self.metadata_store[doc_id] = metadata or {}
-        logger.info(f"Added document {doc_id}")
+        # Per-document logging is noisy and can slow down large ingestions.
+        logger.debug(f"Added document {doc_id}")
     
     def add_documents_batch(
         self,

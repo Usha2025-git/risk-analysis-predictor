@@ -17,7 +17,7 @@ from src.agents.risk_agent import create_risk_analyzer
 from src.agents.resource_agent import create_resource_optimizer
 from src.agents.bottleneck_agent import create_bottleneck_detector
 from src.agents.orchestrator import create_orchestrator
-from src.utils import AnalysisCache, serialize_analysis
+from src.utils import AnalysisCache, generate_hash, serialize_analysis
 
 logger = logging.getLogger(__name__)
 
@@ -177,7 +177,8 @@ async def analyze_project(project: ProjectInput):
         project_data = project.dict()
         
         # Check cache first
-        cache_key = f"{project.project_id}_{hash(str(project_data))}"
+        cache_payload = json.dumps(project_data, sort_keys=True, default=str)
+        cache_key = f"analyze-project:{project.project_id}:{generate_hash(cache_payload)}"
         cached_result = analysis_cache.get(cache_key)
         
         if cached_result:

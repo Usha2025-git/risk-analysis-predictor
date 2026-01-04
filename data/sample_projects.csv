@@ -1,0 +1,101 @@
+project_id,project_name,start_date,planned_end_date,actual_end_date,budget,actual_cost,team_size,delays_days,risk_description,resolution,industry,project_phase
+P001,Mobile App Redesign,2023-01-15,2023-06-15,2023-07-30,150000,185000,8,45,Scope creep and designer turnover,Added buffer and cross-training,Technology,Design
+P002,E-Commerce Platform Migration,2023-02-01,2023-08-01,2023-09-15,250000,310000,12,45,Database compatibility issues,Switched database technology,Technology,Development
+P003,Cloud Infrastructure Upgrade,2023-03-10,2023-07-10,2023-07-20,180000,175000,6,10,Unexpected vendor delays,Direct vendor communication,Technology,Infrastructure
+P004,Customer Portal Development,2023-04-01,2023-09-01,2023-10-30,200000,245000,10,60,Incomplete requirements,Agile methodology with weekly reviews,Finance,Development
+P005,Mobile Banking App,2023-05-15,2023-10-15,2023-11-30,300000,385000,15,45,Third-party API integration issues,Built internal API wrapper,Finance,Development
+P006,Data Analytics Pipeline,2023-06-01,2023-11-01,2023-11-10,120000,130000,7,9,Data quality issues discovered,Implemented validation framework,Data Science,Development
+P007,Website Redesign,2023-07-10,2023-10-10,2023-11-15,80000,95000,5,36,Client feedback loops prolonged,Established change control board,Marketing,Design
+P008,API Gateway Implementation,2023-08-01,2023-12-01,2023-12-25,160000,190000,8,24,Security compliance requirements,Third-party security audit,Technology,Development
+P009,CRM System Integration,2023-09-05,2024-01-05,2024-03-01,220000,280000,11,55,Integration complexity underestimated,Brought in specialized consultants,Sales,Integration
+P010,Mobile Payment System,2023-10-15,2024-02-15,2024-04-30,190000,245000,9,74,Regulatory approval delays,Early engagement with regulators,Finance,Compliance
+P011,Big Data Infrastructure,2023-11-01,2024-04-01,2024-05-15,380000,450000,14,44,Scaling challenges,Implemented microservices architecture,Data Science,Infrastructure
+P012,IoT Device Management,2023-12-10,2024-04-10,2024-06-20,200000,275000,10,71,Firmware compatibility issues,Developed compatibility layer,Technology,Development
+P013,Document Management System,2024-01-08,2024-05-08,2024-06-30,140000,165000,7,52,Complex workflow requirements,Process optimization workshop,Operations,Development
+P014,Inventory Management System,2024-02-01,2024-06-01,2024-07-15,160000,185000,8,44,Data migration challenges,Parallel system run approach,Logistics,Migration
+P015,HR Management Platform,2024-03-15,2024-08-15,2024-10-10,130000,160000,7,56,Employee training delays,Comprehensive onboarding program,HR,Deployment
+P016,Supply Chain Optimization,2024-04-01,2024-09-01,2024-11-20,210000,280000,11,80,Vendor coordination complexity,Established vendor council,Logistics,Integration
+P017,Quality Assurance Automation,2024-05-10,2024-09-10,2024-10-25,95000,120000,6,45,Tool compatibility issues,Custom test framework development,Technology,Development
+P018,Business Intelligence Platform,2024-06-01,2024-11-01,2025-01-10,270000,330000,12,70,Complex data modeling,Dedicated data architect hired,Data Science,Development
+P019,Mobile App Testing Framework,2024-07-15,2024-10-15,2024-11-30,85000,105000,5,45,Cross-platform compatibility,Test infrastructure rebuilding,Technology,Testing
+P020,Network Security Upgrade,2024-08-01,2024-11-01,2024-12-15,175000,205000,8,44,Compliance standard changes,Security policy overhaul,Technology,Infrastructure
+P021,Customer Data Platform,2024-09-05,2025-02-05,2025-04-20,320000,395000,13,74,Real-time processing requirements,Stream processing architecture,Data Science,Development
+P022,Enterprise Search Solution,2024-10-10,2025-02-10,2025-03-25,145000,175000,7,43,Indexing performance bottleneck,Query optimization sprint,Technology,Development
+P023,Telecommunications System Upgrade,2024-11-01,2025-03-01,2025-05-10,500000,620000,20,70,Legacy system integration,Custom middleware development,Telecommunications,Integration
+P024,Healthcare Data Exchange,2024-12-15,2025-04-15,2025-06-30,280000,350000,12,76,HIPAA compliance requirements,External compliance consultant,Healthcare,Compliance
+P025,Machine Learning Pipeline,2025-01-10,2025-05-10,2025-07-15,210000,275000,10,65,Model training data collection,Expanded data sourcing strategy,Data Science,Development
+P026,Chatbot Development Platform,2025-02-01,2025-06-01,2025-08-10,165000,215000,9,70,NLP accuracy improvements,Specialized ML engineers hired,Technology,Development
+P027,Blockchain Proof of Concept,2025-03-15,2025-08-15,2025-10-30,190000,250000,9,76,Smart contract security,Third-party security audit,Fintech,Development
+P028,Advanced Analytics Dashboard,2025-04-01,2025-08-01,2025-09-20,155000,195000,8,50,Real-time data integration,ETL pipeline optimization,Data Science,Development
+P029,Microservices Migration,2025-05-10,2025-11-10,2026-01-15,320000,415000,14,66,Service coupling issues,Domain-driven design workshop,Technology,Refactoring
+P030,Customer Recommendation Engine,2025-06-01,2025-10-01,2025-12-10,175000,225000,8,70,Recommendation accuracy,A/B testing framework,Data Science,Development
+P031,IoT Edge Computing Platform,2025-07-15,2025-11-15,2026-02-01,240000,310000,11,78,Edge device compatibility,Platform abstraction layer,Technology,Development
+P032,Fraud Detection System,2025-08-01,2025-12-01,2026-01-30,200000,260000,10,60,Model interpretability needs,Explainable AI framework,Finance,Development
+P033,Video Streaming Service,2025-09-10,2026-02-10,2026-04-15,350000,445000,15,64,CDN optimization,Content delivery optimization,Media,Development
+P034,Employee Training Platform,2025-10-01,2026-02-01,2026-03-20,130000,165000,7,48,Learning analytics complexity,Analytics team augmentation,HR,Development
+P035,Real Estate Portal,2025-11-15,2026-03-15,2026-05-10,180000,230000,9,56,Image processing performance,GPU cluster implementation,Real Estate,Development
+P036,Automated Report Generator,2025-12-01,2026-04-01,2026-05-25,110000,145000,6,54,Template complexity,Simplified template language,Operations,Development
+P037,Smart Building Management,2026-01-10,2026-06-10,2026-08-20,220000,290000,10,71,Sensor integration challenges,Standard protocol adoption,Facility,Development
+P038,Content Management System,2026-02-01,2026-07-01,2026-09-15,140000,185000,7,75,Plugin ecosystem complexity,Plugin framework redesign,Technology,Development
+P039,Financial Planning Tool,2026-03-15,2026-08-15,2026-10-30,160000,215000,8,76,Regulatory requirement changes,Compliance monitoring system,Finance,Development
+P040,Social Media Analytics,2026-04-01,2026-08-01,2026-10-10,145000,190000,7,70,API rate limiting issues,Caching strategy implementation,Marketing,Development
+P041,Augmented Reality Experience,2026-05-10,2026-11-10,2027-01-20,280000,370000,12,71,3D model optimization,Graphics engine upgrade,Technology,Development
+P042,Predictive Maintenance System,2026-06-01,2026-11-01,2027-01-10,195000,260000,9,70,Sensor data quality,Data cleaning pipeline,Manufacturing,Development
+P043,Multi-Tenant SaaS Platform,2026-07-15,2027-01-15,2027-03-25,320000,420000,13,69,Tenant isolation complexity,Isolation framework redesign,Technology,Development
+P044,Vehicle Fleet Optimization,2026-08-01,2026-12-01,2027-02-15,175000,240000,8,76,GPS tracking latency,Edge computing deployment,Logistics,Development
+P045,Knowledge Management System,2026-09-10,2027-02-10,2027-04-20,140000,190000,7,69,Content migration challenges,Migration tool development,Operations,Migration
+P046,Manufacturing Quality Control,2026-10-01,2027-03-01,2027-05-10,210000,285000,10,70,Computer vision accuracy,ML model refinement,Manufacturing,Development
+P047,Employee Benefits Portal,2026-11-15,2027-04-15,2027-06-20,120000,160000,6,66,Integration with payroll system,Custom adapter development,HR,Integration
+P048,Customer Loyalty Program,2026-12-01,2027-05-01,2027-07-15,155000,210000,8,75,Reward calculation complexity,Algorithm optimization sprint,Retail,Development
+P049,Network Monitoring Tool,2027-01-10,2027-05-10,2027-07-25,130000,175000,7,75,Performance overhead concerns,Instrumentation optimization,Technology,Development
+P050,Sales Pipeline Management,2027-02-01,2027-06-01,2027-08-20,145000,195000,7,79,Forecast accuracy issues,Sales forecasting training,Sales,Development
+P051,Energy Management System,2027-03-15,2027-08-15,2027-10-30,190000,260000,9,76,Smart meter integration,Meter API development,Utilities,Development
+P052,Academic Learning Management,2027-04-01,2027-09-01,2027-11-10,160000,215000,8,70,User interface complexity,UX redesign iteration,Education,Development
+P053,Legal Document Automation,2027-05-10,2027-10-10,2027-12-20,135000,180000,6,71,Template validation logic,Validation framework enhancement,Legal,Development
+P054,Telehealth Platform,2027-06-01,2027-11-01,2028-01-15,220000,290000,10,75,HIPAA security requirements,Security audit completion,Healthcare,Compliance
+P055,Inventory Forecasting,2027-07-15,2027-12-15,2028-02-25,165000,225000,8,72,Historical data quality,Data cleansing initiative,Retail,Development
+P056,Customer Journey Mapping,2027-08-01,2027-12-01,2028-02-10,125000,170000,6,70,Touchpoint identification,Customer research expansion,Marketing,Analysis
+P057,API Documentation Generator,2027-09-10,2028-02-10,2028-04-15,95000,135000,5,64,Swagger integration,OpenAPI adoption,Technology,Development
+P058,Compliance Audit Tool,2027-10-01,2028-03-01,2028-05-20,170000,235000,8,80,Audit report generation,Reporting engine overhaul,Finance,Development
+P059,Employee Engagement Survey,2027-11-15,2028-04-15,2028-06-25,85000,125000,4,71,Response rate optimization,Survey redesign,HR,Development
+P060,Distribution Network Optimization,2027-12-01,2028-05-01,2028-07-30,230000,315000,10,89,Route calculation complexity,Algorithm optimization,Logistics,Development
+P061,Contract Management System,2028-01-10,2028-06-10,2028-08-25,145000,200000,7,76,Search functionality,Search index optimization,Legal,Development
+P062,Brand Management Portal,2028-02-01,2028-07-01,2028-09-15,130000,180000,6,75,Asset management complexity,DAM system integration,Marketing,Development
+P063,Price Optimization Engine,2028-03-15,2028-08-15,2028-10-30,180000,245000,8,76,Price elasticity modeling,Statistical model refinement,Retail,Development
+P064,Risk Assessment Tool,2028-04-01,2028-09-01,2028-11-20,155000,215000,7,80,Historical risk data completeness,Data enrichment project,Finance,Development
+P065,Team Collaboration Platform,2028-05-10,2028-10-10,2028-12-25,190000,265000,9,76,Real-time synchronization,Infrastructure scaling,Technology,Development
+P066,Customer Service Analytics,2028-06-01,2028-11-01,2029-01-10,140000,195000,7,70,Sentiment analysis accuracy,NLP model improvement,Customer Service,Development
+P067,Code Repository Migration,2028-07-15,2028-11-15,2029-02-01,120000,170000,6,78,Git workflow adoption,Team training program,Technology,Migration
+P068,Product Recommendation AI,2028-08-01,2028-12-01,2029-02-15,175000,240000,8,76,Personalization accuracy,Data collection expansion,Retail,Development
+P069,Supply Chain Visibility,2028-09-10,2029-02-10,2029-04-20,210000,290000,10,69,Blockchain integration,Distributed ledger study,Logistics,Development
+P070,Marketing Automation Suite,2028-10-01,2029-03-01,2029-05-10,185000,260000,9,70,Campaign complexity,Automation workflow library,Marketing,Development
+P071,Customer Retention Program,2028-11-15,2029-04-15,2029-06-30,125000,175000,6,76,Churn prediction accuracy,ML model validation,Retail,Development
+P072,Performance Monitoring Dashboard,2028-12-01,2029-05-01,2029-07-20,140000,195000,7,80,Metric standardization,Metrics framework redesign,Operations,Development
+P073,Cloud Cost Optimization,2029-01-10,2029-05-10,2029-07-25,115000,160000,6,75,Resource utilization visibility,Cost analysis tool,Technology,Optimization
+P074,Cybersecurity Incident Response,2029-02-01,2029-07-01,2029-09-15,170000,230000,8,75,Incident logging complexity,Logging system upgrade,Technology,Infrastructure
+P075,Customer Data Privacy,2029-03-15,2029-08-15,2029-10-30,160000,220000,8,76,GDPR compliance,Privacy by design adoption,Legal,Compliance
+P076,Workflow Automation Engine,2029-04-01,2029-09-01,2029-11-20,180000,250000,9,80,Complex state management,State machine framework,Technology,Development
+P077,Business Continuity Planning,2029-05-10,2029-10-10,2029-12-25,140000,190000,7,76,Recovery time objectives,DR testing program,Operations,Planning
+P078,Capacity Planning Tool,2029-06-01,2029-11-01,2030-01-15,155000,215000,7,75,Demand forecasting,Time series analysis,Operations,Development
+P079,Third Party Integration Hub,2029-07-15,2029-12-15,2030-02-28,190000,270000,9,76,API standardization,Integration framework,Technology,Development
+P080,Sales Territory Management,2029-08-01,2029-12-01,2030-02-10,120000,170000,6,71,Territory optimization algorithm,Sales operations training,Sales,Development
+P081,Customer Feedback Loop,2029-09-10,2030-02-10,2030-04-20,100000,145000,5,69,Feedback categorization,Text classification model,Customer Service,Development
+P082,Digital Asset Management,2029-10-01,2030-03-01,2030-05-15,175000,240000,8,75,Media processing performance,CDN integration,Marketing,Development
+P083,Enterprise Mobility Platform,2029-11-15,2030-04-15,2030-06-30,210000,285000,10,76,Mobile-first architecture,Responsive design framework,Technology,Development
+P084,Employee Health Benefits,2029-12-01,2030-05-01,2030-07-20,130000,180000,6,80,Benefits integration complexity,Custom data mapper,HR,Integration
+P085,Vendor Performance Management,2030-01-10,2030-06-10,2030-08-25,140000,195000,7,75,Metric alignment,Vendor scorecard system,Procurement,Development
+P086,Market Intelligence Platform,2030-02-01,2030-07-01,2030-09-15,185000,255000,8,75,Data source integration,Data pipeline automation,Strategy,Development
+P087,Environmental Compliance Tracking,2030-03-15,2030-08-15,2030-10-30,155000,215000,7,76,Reporting automation,Compliance report generator,Operations,Development
+P088,Customer Profiling Engine,2030-04-01,2030-09-01,2030-11-20,180000,250000,9,80,Data privacy in profiling,Privacy-preserving analytics,Retail,Development
+P089,Competitive Analysis Tool,2030-05-10,2030-10-10,2030-12-25,120000,170000,6,76,Market data accuracy,Data validation framework,Strategy,Development
+P090,Financial Forecasting Model,2030-06-01,2030-11-01,2031-01-15,200000,275000,9,75,Model accuracy,Ensemble methods research,Finance,Development
+P091,Inventory Allocation System,2030-07-15,2030-12-15,2031-02-28,160000,220000,8,76,Allocation algorithm,Optimization algorithm refinement,Retail,Development
+P092,Customer Attribution Model,2030-08-01,2030-12-01,2031-02-10,170000,240000,8,71,Attribution complexity,Multi-touch attribution,Marketing,Development
+P093,Supply Chain Resilience,2030-09-10,2031-02-10,2031-04-20,215000,295000,10,69,Resilience metrics,Scenario planning framework,Logistics,Development
+P094,Enterprise Architecture Update,2030-10-01,2031-03-01,2031-05-15,240000,325000,11,75,System integration complexity,Architecture review board,Technology,Planning
+P095,Customer Lifetime Value,2030-11-15,2031-04-15,2031-06-30,145000,200000,7,76,CLV accuracy,Predictive modeling framework,Finance,Development
+P096,Digital Transformation Initiative,2030-12-01,2031-05-01,2031-07-20,280000,380000,12,80,Change management,Transformation office setup,Strategy,Development
+P097,Manufacturing Efficiency Program,2031-01-10,2031-06-10,2031-08-25,190000,265000,9,76,Production optimization,Lean manufacturing training,Manufacturing,Optimization
+P098,Data Governance Framework,2031-02-01,2031-07-01,2031-09-15,160000,225000,8,75,Policy enforcement,Data stewardship program,Data Science,Framework
+P099,API Monetization Platform,2031-03-15,2031-08-15,2031-10-30,175000,245000,8,76,Usage tracking accuracy,Analytics integration,Technology,Development
+P100,Enterprise Intelligence Platform,2031-04-01,2031-09-01,2031-11-30,320000,425000,14,90,Complex BI requirements,BI competency center,Data Science,Development

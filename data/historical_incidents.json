@@ -1,0 +1,204 @@
+{
+  "incidents": [
+    {
+      "incident_id": "INC001",
+      "project_id": "P001",
+      "incident_date": "2023-04-15",
+      "severity": "High",
+      "category": "Resource",
+      "description": "Key designer left the project unexpectedly due to family emergency",
+      "impact": "3-week delay in design completion",
+      "resolution": "Cross-trained another designer to take over responsibilities"
+    },
+    {
+      "incident_id": "INC002",
+      "project_id": "P002",
+      "incident_date": "2023-05-20",
+      "severity": "Critical",
+      "category": "Technical",
+      "description": "Database schema incompatibility discovered during integration testing",
+      "impact": "2-week technical spike required",
+      "resolution": "Redesigned schema and created migration scripts"
+    },
+    {
+      "incident_id": "INC003",
+      "project_id": "P003",
+      "incident_date": "2023-06-10",
+      "severity": "Low",
+      "category": "Vendor",
+      "description": "Cloud vendor announced maintenance window during critical deployment",
+      "impact": "1-day schedule shift",
+      "resolution": "Negotiated priority access with vendor"
+    },
+    {
+      "incident_id": "INC004",
+      "project_id": "P004",
+      "incident_date": "2023-06-25",
+      "severity": "High",
+      "category": "Requirements",
+      "description": "Stakeholders requested major scope changes mid-project",
+      "impact": "4-week project extension needed",
+      "resolution": "Implemented change control board and prioritization meetings"
+    },
+    {
+      "incident_id": "INC005",
+      "project_id": "P005",
+      "incident_date": "2023-07-30",
+      "severity": "Critical",
+      "category": "Technical",
+      "description": "Third-party payment API had rate limiting issues",
+      "impact": "Payment processing delayed",
+      "resolution": "Implemented queue system and caching layer"
+    },
+    {
+      "incident_id": "INC006",
+      "project_id": "P006",
+      "incident_date": "2023-08-05",
+      "severity": "Medium",
+      "category": "Quality",
+      "description": "Data quality issues detected during pipeline testing",
+      "impact": "1-week validation period added",
+      "resolution": "Built comprehensive data validation framework"
+    },
+    {
+      "incident_id": "INC007",
+      "project_id": "P007",
+      "incident_date": "2023-09-01",
+      "severity": "Medium",
+      "category": "Process",
+      "description": "Client feedback review cycles taking longer than expected",
+      "impact": "Design iterations delayed",
+      "resolution": "Structured feedback process with fixed review schedules"
+    },
+    {
+      "incident_id": "INC008",
+      "project_id": "P008",
+      "incident_date": "2023-09-15",
+      "severity": "High",
+      "category": "Compliance",
+      "description": "New security compliance requirements emerged",
+      "impact": "2-week additional work for security hardening",
+      "resolution": "Hired external security consultant for assessment"
+    },
+    {
+      "incident_id": "INC009",
+      "project_id": "P009",
+      "incident_date": "2023-10-20",
+      "severity": "Critical",
+      "category": "Integration",
+      "description": "CRM legacy system integration more complex than estimated",
+      "impact": "5-week delay",
+      "resolution": "Brought in legacy system specialists"
+    },
+    {
+      "incident_id": "INC010",
+      "project_id": "P010",
+      "incident_date": "2023-11-05",
+      "severity": "Critical",
+      "category": "Regulatory",
+      "description": "Regulatory body required additional approval steps",
+      "impact": "7-week approval delay",
+      "resolution": "Early engagement with regulators for future projects"
+    },
+    {
+      "incident_id": "INC011",
+      "project_id": "P011",
+      "incident_date": "2023-12-10",
+      "severity": "High",
+      "category": "Technical",
+      "description": "Big data platform scaling issues at 10TB data volume",
+      "impact": "Performance bottleneck discovered",
+      "resolution": "Redesigned architecture for distributed processing"
+    },
+    {
+      "incident_id": "INC012",
+      "project_id": "P012",
+      "incident_date": "2024-01-15",
+      "severity": "High",
+      "category": "Technical",
+      "description": "IoT firmware incompatibility with device models",
+      "impact": "Testing regression of 2 weeks",
+      "resolution": "Created device abstraction layer"
+    },
+    {
+      "incident_id": "INC013",
+      "project_id": "P013",
+      "incident_date": "2024-02-01",
+      "severity": "Medium",
+      "category": "Requirements",
+      "description": "Complex workflow requirements discovered late",
+      "impact": "Design rework needed",
+      "resolution": "Requirements workshop with all stakeholders"
+    },
+    {
+      "incident_id": "INC014",
+      "project_id": "P014",
+      "incident_date": "2024-02-20",
+      "severity": "High",
+      "category": "Data",
+      "description": "Data migration revealed inconsistencies in source data",
+      "impact": "Extended validation period",
+      "resolution": "Developed data quality scoring and parallel migration"
+    },
+    {
+      "incident_id": "INC015",
+      "project_id": "P015",
+      "incident_date": "2024-03-25",
+      "severity": "Medium",
+      "category": "Training",
+      "description": "Employee training required longer than expected",
+      "impact": "Deployment pushed back 4 weeks",
+      "resolution": "Comprehensive onboarding program developed"
+    },
+    {
+      "incident_id": "INC016",
+      "project_id": "P016",
+      "incident_date": "2024-04-30",
+      "severity": "High",
+      "category": "Coordination",
+      "description": "Multiple vendors needed coordination for supply chain",
+      "impact": "Scheduling complexity increased",
+      "resolution": "Established vendor council and coordination office"
+    },
+    {
+      "incident_id": "INC017",
+      "project_id": "P017",
+      "incident_date": "2024-05-15",
+      "severity": "Medium",
+      "category": "Technical",
+      "description": "Test automation tool compatibility issues",
+      "impact": "Alternative tooling needed",
+      "resolution": "Developed custom test framework"
+    },
+    {
+      "incident_id": "INC018",
+      "project_id": "P018",
+      "incident_date": "2024-06-20",
+      "severity": "High",
+      "category": "Technical",
+      "description": "Data modeling for complex business rules",
+      "impact": "Extended design phase",
+      "resolution": "Hired dedicated data architect"
+    },
+    {
+      "incident_id": "INC019",
+      "project_id": "P019",
+      "incident_date": "2024-07-25",
+      "severity": "Medium",
+      "category": "Technical",
+      "description": "Cross-platform mobile testing complexity",
+      "impact": "Test cycle extended",
+      "resolution": "Built comprehensive test infrastructure"
+    },
+    {
+      "incident_id": "INC020",
+      "project_id": "P020",
+      "incident_date": "2024-08-10",
+      "severity": "High",
+      "category": "Compliance",
+      "description": "New security compliance standards emerged",
+      "impact": "Security hardening required",
+      "resolution": "Security policy overhaul conducted"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+resource_id,resource_name,skill_category,skill_level,current_allocation,max_allocation,hourly_rate,availability
+R001,Alice Johnson,Backend Development,Expert,0.8,1.0,95,Available
+R002,Bob Smith,Frontend Development,Senior,0.9,1.0,90,Available
+R003,Carol White,DevOps,Expert,0.7,1.0,100,Available
+R004,David Brown,QA Engineering,Senior,0.6,1.0,75,Available
+R005,Emma Davis,UI/UX Design,Senior,0.85,1.0,80,Available
+R006,Frank Miller,Data Science,Expert,0.75,1.0,110,Available
+R007,Grace Lee,Project Management,Senior,0.9,1.0,85,Available
+R008,Henry Chen,Backend Development,Senior,0.7,1.0,85,Available
+R009,Iris Martinez,Mobile Development,Senior,0.8,1.0,90,Available
+R010,Jack Wilson,DevOps,Senior,0.65,1.0,85,Available
+R011,Karen Taylor,Frontend Development,Expert,0.95,1.0,105,OnLeave
+R012,Leon Rodriguez,Data Science,Senior,0.6,1.0,95,Available
+R013,Maria Garcia,QA Engineering,Senior,0.7,1.0,75,Available
+R014,Nathan Thompson,Backend Development,Senior,0.8,1.0,85,Available
+R015,Olivia Anderson,UI/UX Design,Senior,0.75,1.0,80,Available
+R016,Peter Jackson,DevOps,Senior,0.6,1.0,85,Available
+R017,Quinn Stewart,Mobile Development,Senior,0.7,1.0,90,Available
+R018,Rachel Price,Project Management,Senior,0.85,1.0,85,Available
+R019,Samuel Bennett,Backend Development,Senior,0.75,1.0,85,Available
+R020,Tina Lopez,Data Science,Senior,0.7,1.0,95,Available
+R021,Uma Patel,Frontend Development,Senior,0.8,1.0,85,Available
+R022,Victor Kim,QA Engineering,Senior,0.65,1.0,75,Available
+R023,Wendy Chang,UI/UX Design,Senior,0.7,1.0,80,Available
+R024,Xavier Sanchez,DevOps,Senior,0.55,1.0,85,Available
+R025,Yuki Tanaka,Backend Development,Senior,0.8,1.0,85,Available
+R026,Zara Hassan,Data Science,Senior,0.75,1.0,95,Available
+R027,Adrian Wu,Mobile Development,Senior,0.65,1.0,90,Available
+R028,Bella Russo,Frontend Development,Senior,0.85,1.0,85,Available
+R029,Carlos Mendez,Project Management,Senior,0.8,1.0,85,Available
+R030,Diana Prince,DevOps,Expert,0.7,1.0,100,Available
+R031,Ethan Hunt,Backend Development,Senior,0.75,1.0,85,Available
+R032,Fiona Green,QA Engineering,Senior,0.6,1.0,75,Available
+R033,Gregory Scott,Data Science,Senior,0.8,1.0,95,Available
+R034,Hannah White,UI/UX Design,Senior,0.75,1.0,80,Available
+R035,Isaac Turner,Frontend Development,Senior,0.7,1.0,85,Available

@@ -1,7 +1,7 @@
 """API routes package."""
 from fastapi import APIRouter
 
-from app.api.routes import auth, projects, risks, resources, analytics
+from backend.app.api.routes import auth, projects, risks, resources, analytics
 
 # Create main router
 api_router = APIRouter()

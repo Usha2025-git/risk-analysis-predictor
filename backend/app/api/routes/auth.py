@@ -5,16 +5,16 @@ from sqlalchemy.orm import Session
 from datetime import timedelta
 import uuid
 
-from app.database import get_db
-from app.models import User
-from app.schemas import UserCreate, User as UserSchema
-from app.core.security import (
+from backend.app.database import get_db
+from backend.app.models import User
+from backend.app.schemas import UserCreate, User as UserSchema
+from backend.app.core.security import (
     get_password_hash,
     verify_password,
     create_access_token,
     decode_token
 )
-from app.config import settings
+from backend.app.config import settings
 
 router = APIRouter()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="/api/v1/auth/login")

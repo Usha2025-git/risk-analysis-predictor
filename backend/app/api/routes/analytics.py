@@ -5,10 +5,10 @@ from sqlalchemy import func
 from datetime import datetime, timedelta
 import math
 
-from app.database import get_db
-from app.models import Project, Risk, Resource
-from app.schemas import DashboardStats, AnalyticsResponse
-from app.api.dependencies import get_current_user
+from backend.app.database import get_db
+from backend.app.models import Project, Risk, Resource
+from backend.app.schemas import DashboardStats, AnalyticsResponse
+from backend.app.api.dependencies import get_current_user
 
 router = APIRouter()
 

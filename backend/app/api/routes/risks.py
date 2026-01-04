@@ -4,10 +4,10 @@ from sqlalchemy.orm import Session
 from typing import List, Optional
 import uuid
 
-from app.database import get_db
-from app.models import Risk, Project
-from app.schemas import Risk as RiskSchema, RiskCreate
-from app.api.dependencies import get_current_user
+from backend.app.database import get_db
+from backend.app.models import Risk, Project
+from backend.app.schemas import Risk as RiskSchema, RiskCreate
+from backend.app.api.dependencies import get_current_user
 
 router = APIRouter()
 

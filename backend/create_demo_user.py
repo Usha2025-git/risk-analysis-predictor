@@ -4,9 +4,9 @@ Create a demo user for testing the application.
 Run this script to add a test user to the database.
 """
 import uuid
-from app.database import SessionLocal, init_db
-from app.models.user import User
-from app.core.security import get_password_hash
+from backend.app.database import SessionLocal, init_db
+from backend.app.models.user import User
+from backend.app.core.security import get_password_hash
 
 # Use a stronger demo password to avoid browser breached-password warnings.
 DEMO_PASSWORD = "Demo!2026#01"
